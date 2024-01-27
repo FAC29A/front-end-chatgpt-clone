@@ -38,7 +38,7 @@ function getFetch(endPoint, requestOptions) {
             return response.json();
         }).then((data) => {
             console.log(data);
-            display.textContent = JSON.stringify(data, null, 2); // Displaying the response
+            display.textContent = JSON.stringify(data.choices[0].message.content, null, 2); // Displaying the response
         })
         .catch(error => console.log('Error:', error));
 };
