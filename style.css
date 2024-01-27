@@ -61,10 +61,14 @@ input[type="text"] {
 form {
     display: flex;
     flex-direction: column;
+    font-family: (--paras);
     width: 50%;
     margin: auto;
 }
 
+form label {
+    font-family: var(--paras);
+}
 textarea {
     border: 1px solid var(--d-green);
 }
