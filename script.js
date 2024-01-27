@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const APIKEY = process.env.OPENAI_KEY;
+const APIKEY = document.getElementById('API-KEY').textContent;
 const searchContent = document.getElementById('search').textContent;
 const display = document.getElementById('search-item');
 
