@@ -39,9 +39,13 @@ function getFetch(endPoint, requestOptions) {
             }
             return response.json();
         }).then((data) => {
+            console.log(data);
             const botMessage = data.choices[0].message.content;
             conversation.push({ role: "system", content: botMessage });
             display.textContent = botMessage; 
+
+            
+
         })
         .catch(error => console.log('Error:', error));
 };
