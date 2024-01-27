@@ -1,12 +1,14 @@
 const form = document.querySelector('form');
 const display = document.getElementById('search-item');
+let conversation = [];
 
 function getSearchItem(event){
     event.preventDefault(); 
 
     const APIKEY = document.getElementById("API-KEY").value;
     const searchContent = document.getElementById('search').value;
-
+    // Add user message to the conversation
+    conversation.push({ role: "user", content: searchContent });
     console.log(APIKEY);
     console.log(searchContent);
 
@@ -18,11 +20,11 @@ function getSearchItem(event){
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo-1106",
-            messages: [{"role": "user", "content" : searchContent}], 
+            messages: conversation,
             max_tokens: 50
         })
     };
-    
+
     getFetch('https://api.openai.com/v1/chat/completions', requestOptions);  
 }
 
@@ -38,7 +40,12 @@ function getFetch(endPoint, requestOptions) {
             return response.json();
         }).then((data) => {
             console.log(data);
-            display.textContent = JSON.stringify(data.choices[0].message.content, null, 2); // Displaying the response
+            const botMessage = data.choices[0].message.content;
+            conversation.push({ role: "system", content: botMessage });
+            display.textContent = botMessage; 
+
+            
+
         })
         .catch(error => console.log('Error:', error));
 };
