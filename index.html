@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatGPT Front End</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <section class="chat-section">
+        <h1>FAC ChatGPT</h1>
+        <h2>What would you like to ask us?</h2>
+          <div class="chat-form">
+            <form action="#" method="GET">
+              <label for="search"></label>
+              <textarea name="search" id="search" cols="30" rows="10"></textarea>
+              <button type="submit" id="submit" class="submit-button">Submit</button>
+            </form>
+          </div>
+    </section>
 
     <form action="/" method="GET">
         <label for="API-KEY">Add your API key here:</label>
@@ -15,8 +32,12 @@
         <button type="submit" id="submit">Submit</button>
     </form>
 
+
     <p id="search-item"></p>
 
     <script src="script.js"></script>
-</body>
+  </body>
+  <footer>
+    <p>Created by Fran, Nas, Egbie, Isaac & Ciaran</p>
+  </footer>
 </html>
