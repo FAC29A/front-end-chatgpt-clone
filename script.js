@@ -1,6 +1,5 @@
 const form = document.querySelector('form');
 const display = document.getElementById('search-item');
-//const submit = document.getElementById('submit');
 
 function getSearchItem(event){
     event.preventDefault(); 
@@ -43,25 +42,3 @@ function getFetch(endPoint, requestOptions) {
         })
         .catch(error => console.log('Error:', error));
 };
-// const APIKEY = document.getElementById('API-KEY').value;
-// const APIKEY = "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"
-// const model = "gpt-3.5-turbo-1106"; // Replace with your desired model, e.g., 'davinci', 'curie', etc.
-// const openAiEndpoint = `https://api.openai.com/v1/engines/${model}/completions`;
-
-// const requestOptions = {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${APIKEY}` // Replace with your actual API key
-//     },
-//     body: JSON.stringify({
-//         prompt: "Your prompt here",
-//         max_tokens: 50
-//         // ... other parameters as needed
-//     })
-// };
-
-// fetch(openAiEndpoint, requestOptions)
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-//     .catch(error => console.error('Error:', error));
