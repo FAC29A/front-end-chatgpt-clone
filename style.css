@@ -47,6 +47,24 @@ button {
     
 }
 
+
+input[type="text"] {
+    height: 40px;
+    font-size: 17px;
+}
+
+#submit-btn {
+    height: 40px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
 textarea {
     border: 1px solid var(--d-green);
 }
@@ -65,4 +83,3 @@ footer p {
     font-weight: 300;
     font-size: 14px;
 }
-
