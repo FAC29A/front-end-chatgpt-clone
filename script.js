@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const APIKEY = document.getElementById('API-KEY').textContent;
+const APIKEY = document.getElementById('API-KEY').value;
 const searchContent = document.getElementById('search').textContent;
 const display = document.getElementById('search-item');
 
