@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 
-
+const chatHistory         = document.querySelector(".previous-chat"); // Chat history container
 const display             = document.getElementById('search-item');
 const previousChatBtn     = document.querySelector(".previous-chat-btn");
 const previousChat        = document.querySelector(".previous-chat");
@@ -95,7 +95,7 @@ function updateUIMessage(message) {
  * @param {string} message - The content of the message.
  */
 function createHistoryElement(role, message) {
-    const chatHistory = document.querySelector(".previous-chat"); // Chat history container
+    
     const previousMessage = document.createElement("div");        // Create a new div for the message
     const pRoleTag = document.createElement("p");                 // Create a paragraph element for the role
     const pMessageTag = document.createElement("p");              // Create a paragraph element for the message
@@ -120,10 +120,15 @@ function createHistoryElement(role, message) {
 
     // Append the message container to the chat history
     chatHistory.appendChild(previousMessage);
+
+    
 }
 
 
 function getChatHistory(conversation) {
+
+    // Clear previous messages before adding a new one
+    chatHistory.innerHTML = ''; 
     conversation.forEach(chat => {
      createHistoryElement(chat.role, chat.content)
     }    
@@ -135,7 +140,7 @@ function getChatHistory(conversation) {
 
 
 
-function preiousChatButton() {
+function previousChatButton() {
     previousChatBtn.addEventListener("click", handleButtonClick);
 }
 
@@ -170,5 +175,5 @@ function updatePreviousChatButton() {
     previousChatBtn.textContent = isPreviousChatVisible ? "Close" : "View chat history";
 }
 
-preiousChatButton();
+previousChatButton();
 form.addEventListener('submit', getSearchItem);
