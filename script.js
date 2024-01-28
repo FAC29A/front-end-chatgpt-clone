@@ -140,36 +140,24 @@ function preiousChatButton() {
 }
 
 
-
 function handleButtonClick(event) {
-    event.preventDefault();
-    togglePreviousChatVisibility();
-    updatePreviousChatButton();
-}
 
-function togglePreviousChatVisibility() {
+    event.preventDefault()
+    
     if (isPreviousChatVisible) {
-        showPreviousChat();
+        previousChat.style.display      = "block";
+        previousChatBtn.textContent     = "Close";
+        previousChatTitle.style.display = "block";
     } else {
-        hidePreviousChat();
+        previousChat.style.display      = "none";
+        previousChatBtn.textContent     = "View chat history";
+        previousChatTitle.style.display = "none";
     }
+
+    
+
     isPreviousChatVisible = !isPreviousChatVisible;
 }
-
-function showPreviousChat() {
-    previousChat.style.display = "block";
-    previousChatTitle.style.display = "block";
-}
-
-function hidePreviousChat() {
-    previousChat.style.display = "none";
-    previousChatTitle.style.display = "none";
-}
-
-function updatePreviousChatButton() {
-    previousChatBtn.textContent = isPreviousChatVisible ? "Close" : "View chat history";
-}
-
 
 
 
