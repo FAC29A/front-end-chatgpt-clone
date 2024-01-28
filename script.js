@@ -134,7 +134,7 @@ function getChatHistory(conversation) {
     }    
     
  )
- // conversation = [];
+//  conversation = [];
 };
 
 
@@ -172,7 +172,7 @@ function hidePreviousChat() {
 }
 
 function updatePreviousChatButton() {
-    previousChatBtn.textContent = isPreviousChatVisible ? "Close" : "View chat history";
+    previousChatBtn.textContent = isPreviousChatVisible ? "View chat history" : "Close";
 }
 
 previousChatButton();
