@@ -129,7 +129,7 @@ function getChatHistory(conversation) {
     }    
     
  )
-//  conversation = [];
+ conversation = [];
 };
 
 
@@ -140,26 +140,35 @@ function preiousChatButton() {
 }
 
 
+
 function handleButtonClick(event) {
+    event.preventDefault();
+    togglePreviousChatVisibility();
+    updatePreviousChatButton();
+}
 
-    event.preventDefault()
-    
+function togglePreviousChatVisibility() {
     if (isPreviousChatVisible) {
-        previousChat.style.display      = "block";
-        previousChatBtn.textContent     = "Close";
-        previousChatTitle.style.display = "block";
+        showPreviousChat();
     } else {
-        previousChat.style.display      = "none";
-        previousChatBtn.textContent     = "View chat history";
-        previousChatTitle.style.display = "none";
+        hidePreviousChat();
     }
-
-    
-
     isPreviousChatVisible = !isPreviousChatVisible;
 }
 
+function showPreviousChat() {
+    previousChat.style.display = "block";
+    previousChatTitle.style.display = "block";
+}
 
+function hidePreviousChat() {
+    previousChat.style.display = "none";
+    previousChatTitle.style.display = "none";
+}
+
+function updatePreviousChatButton() {
+    previousChatBtn.textContent = isPreviousChatVisible ? "Close" : "View chat history";
+}
 
 preiousChatButton();
 form.addEventListener('submit', getSearchItem);
