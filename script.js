@@ -112,6 +112,7 @@ function createHistoryElement(role, message) {
     // additional styling for system messages based on conversation length
     if (role === "system" && conversation.length % 2 === 0) {
         previousMessage.classList.add("system-right");
+        previousMessage.classList.add("add-line-break")
     }
 
     // Append role and message paragraphs to the message container
