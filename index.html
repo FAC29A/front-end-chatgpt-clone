@@ -15,15 +15,34 @@
     <section class="chat-section">
         <h1>FAC ChatGPT</h1>
         <h2>What would you like to ask us?</h2>
-        <form action="/" method="POST">
+        <form action="/" method="GET">
             <label for="API-KEY">Add your API key here:</label>
             <input name="API-KEY" type="text" id="API-KEY">
             <label for="search">Add your query here:</label>
             <textarea name="search" id="search" cols="30" rows="10"></textarea>
             <button type="submit" id="submit-btn">Submit</button>
         </form>
+
+        <div class="title-box">
+            <h2 class="system-response">System Response</h2>
+        </div>
+       
         <p id="search-item"></p>
+
+
+        <div class=" title-box view-previous-chat">
+            <button class="previous-chat-btn">View previous chat</button>
+         </div>
+
+        <div class="title-box">
+            <h2 class="previous-chat-title">Previous Chat</h2>
+        </div>
+     
+
+        <div class="previous-chat">
+        </div>
     </section>
+
 
     
 

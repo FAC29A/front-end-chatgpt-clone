@@ -43,9 +43,6 @@ p {
     font-family: var(--paras);
 }
 
-button {
-    
-}
 
 
 input[type="text"] {
@@ -62,8 +59,9 @@ form {
     display: flex;
     flex-direction: column;
     font-family: (--paras);
-    width: 50%;
     margin: auto;
+    width: 50%;
+   
 }
 
 form label {
@@ -86,4 +84,72 @@ footer p {
     color: var(--white);
     font-weight: 300;
     font-size: 14px;
+}
+
+
+
+#search-item {
+    width: 50%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+
+
+
+
+.system-right {
+    text-align: right;
+}
+
+.role {
+    font-weight: bold;
+}
+
+
+/* Chat related elements */
+
+.previous-chat {
+    display: none;
+    background: white;
+    border-bottom: 1px solid lavender;
+    border: 2px solid black;
+    height: 500px;
+    margin: auto;
+    padding: 40px;
+    overflow-y: scroll;
+    width: 50%;
+}
+
+
+/* The chat button */
+.previous-chat-btn {
+   
+    font-family: var(--paras);
+    padding: 40px;
+    margin-top: 60px;
+}
+
+
+.previous-chat-title{
+    display: none;
+}
+
+.previous-msg  {
+    border-bottom: 6px solid lavender;
+}
+
+
+
+
+.title-box {
+    display: flex;
+    margin: auto;
+    width: 50%;
+}
+
+
+.system-response {
+    display: none;
 }
