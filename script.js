@@ -134,7 +134,7 @@ function getChatHistory(conversation) {
     }    
     
  )
- conversation = [];
+ // conversation = [];
 };
 
 
